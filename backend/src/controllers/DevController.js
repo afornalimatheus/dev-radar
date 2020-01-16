@@ -12,6 +12,24 @@ module.exports = {
         return response.json(devs);
     },
 
+    async update(request, response) {
+        const { github_username, name, bio } = request.body;
+
+        let dev = await Dev.findOneAndUpdate({ github_username }, {name, bio});
+        
+        const returnUpdate = await Dev.findOne({ github_username });
+
+        if(returnUpdate != null) {
+            return response.json(returnUpdate);
+        } else {
+            return response.json({ message: "Erro for update dev" });
+        }
+    },
+
+    async destroy(request, response) {
+
+    },
+
     async store(request, response) {
         const { github_username, techs, latitude, longitude } = request.body;
 
