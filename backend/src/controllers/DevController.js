@@ -21,13 +21,19 @@ module.exports = {
 
         if(returnUpdate != null) {
             return response.json(returnUpdate);
-        } else {
-            return response.json({ message: "Erro for update dev" });
+
+        } else { 
+            return response.json({ message: "Erro for update dev or dev not found." });
         }
     },
 
     async destroy(request, response) {
+        const { github_username } = request.body;
 
+        const returnFindDev = await Dev.findOne({ github_username });
+
+        console.log(returnFindDev);
+        return;
     },
 
     async store(request, response) {

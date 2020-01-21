@@ -8,6 +8,7 @@ const routes = Router();
 routes.get('/devs', DevController.index);
 routes.post('/devs', DevController.store);
 routes.put('/update-dev', DevController.update);
+routes.delete('/destroy-dev', DevController.destroy);
 
 routes.get('/search', SearchController.index);
 
