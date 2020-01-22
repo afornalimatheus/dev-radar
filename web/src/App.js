@@ -3,6 +3,7 @@ import React from 'react';
 import './global.css';
 import './App.css'
 import './Sidebar.css'
+import './Main.css'
 
 // UsetState -> função usada pelo React para informar o estado.
 // Componente: bloco isolado de HTML, CSS e JS, o qual não interfere no restante da aplicação.
@@ -43,6 +44,28 @@ function App() {
       </aside>
       <main>
         <ul>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/23086440?v=4" alt="" />
+              <div className="user-info">
+                <strong>Matheus Afornali</strong>
+                <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Developer passionate about vintage cars.</p>
+            <a href="https://github.com/afornalimatheus">Acessar perfil no GitHub</a>
+          </li>
+          <li className="dev-item">
+            <header>
+              <img src="https://avatars0.githubusercontent.com/u/23086440?v=4" alt="" />
+              <div className="user-info">
+                <strong>Matheus Afornali</strong>
+                <span>ReactJS, React Native, Node.js</span>
+              </div>
+            </header>
+            <p>Developer passionate about vintage cars.</p>
+            <a href="https://github.com/afornalimatheus">Acessar perfil no GitHub</a>
+          </li>
           <li className="dev-item">
             <header>
               <img src="https://avatars0.githubusercontent.com/u/23086440?v=4" alt="" />
